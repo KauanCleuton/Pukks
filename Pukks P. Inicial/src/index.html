@@ -13,17 +13,20 @@
 </head>
 
 <body>
-    <header class="headerMenu">
-        <nav class="menu">
-            <ul class="ulMenu">
-                <li class="liMenu"><a href="#">MASCULINO</a></li>
-                <li class="liMenu"><a href="#">FEMININO</a></li>
-                <li class="liMenu"><a href="#">ESPORTES</a></li>
+    <header class="c-header">
+        <nav class="c-header__menu">
+            <ul class="e-menu__list" data-js="menu-list">
+                <li class="menu__list__item"><a href="#">MASCULINO</a></li>
+                <li class="menu__list__item"><a href="#">FEMININO</a></li>
+                <li class="menu__list__item"><a href="#">ESPORTES</a></li>
             </ul>
-            <h1 class="h1Menu">PUKKS</h1>
-            <ul class="ulMenuImg">
+            <h1 class="e-menu__title">PUKKS</h1>
+            <ul class="e-menu__imgs">
                 <a href="#"><img src="./icon/carrinho-carrinho 1.png" alt="carrinho de compras"></a>
                 <a href="#"><img src="./icon//conta 1.png" alt="fazer login na conta"></a>
+                <button class="e-menu__btn-hambuger" data-js="btn-hambuger"> 
+                    <span class="e-btn-hambuger__icon"></span>
+                </button>
             </ul>
         </nav>
     </header>
@@ -43,7 +46,7 @@
             </div>
         </div>
 
-        <div class="cards">
+        <section class="cards">
             <h2 class="h2Card">Feita para você.</h2>
 
             <div class="cardGrid">
@@ -61,12 +64,13 @@
                 </div>
             </div>
 
-            <section class="melhoresMarcas">
-                <div class="marca">
-                    <h2 class="h2Marca">MELHORES MARCAS</h2>
-                </div>
-            </section>
-        </div>
+        </section>
+
+        <section class="melhoresMarcas">
+            <div class="marca">
+                <h2 class="h2Marca">MELHORES MARCAS</h2>
+            </div>
+        </section>
 
     </main>
 

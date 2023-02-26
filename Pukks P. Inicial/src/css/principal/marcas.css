@@ -1,0 +1,35 @@
+.melhoresMarcas {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: 360px;
+}
+.marca {
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100vw 100%;
+  display: flex;
+  background-image: url('../icon/banners/image\ 8.png');
+  justify-content: center;
+  place-items: center;
+  align-items: center;
+}
+.h2Marca {
+  font-size: 70px;
+  padding: 0 30px;
+  position: relative;
+}
+.h2Marca::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  inset: 0;
+  top: 85px;
+}
+.marca img {
+  width: 100%;
+  height: 100%;
+}
