@@ -1,9 +1,11 @@
 .c-header {
   background-color: #141414;
   width: 100%;
-  position: fixed;
-  z-index: 9999;
+  position:fixed;
   padding: 2.3rem 2.5rem;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 }
 
 .c-header__menu {
