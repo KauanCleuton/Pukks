@@ -24,13 +24,13 @@ ul {
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
 }
 
 .u-container {
-    width: 1500px;
+    max-width: 1500px;
     margin: 0 auto;
     padding-top: 160px;
     padding-bottom: 160px;
@@ -50,3 +50,9 @@ img{
 } */
 
 
+@media(max-width:1000px){
+    .u-container {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+}

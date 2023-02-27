@@ -53,11 +53,6 @@
   width: 100%;
 }
 
-.e-menu__imgs img {
-  width: 30px;
-  height: 30px;
-}
-
 .e-menu__btn-hambuger {
   display: none;
 }
@@ -70,6 +65,9 @@
 }
 
 @media (max-width: 1000px) {
+  .e-menu__imgs {
+    gap: 20px;
+  }
   .e-menu__list {
     display: block;
     text-align: center;
@@ -132,6 +130,19 @@
   .e-menu__list.isActiveMenu ~ .e-menu__imgs .e-menu__btn-hambuger .e-btn-hambuger__icon::after{
     transform: rotate(-135deg);
     top: -8.5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .e-menu__title {
+    font-size: 25px;
+  }
+
+  .e-btn-hambuger__icon, 
+  .e-btn-hambuger__icon::before,
+  .e-btn-hambuger__icon::after,
+  .e-menu__imgs img{
+    width: 25px;
   }
 }
 

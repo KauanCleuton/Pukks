@@ -6,17 +6,19 @@
   display: flex;
   gap: 30px;
   position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .e-carrosel__conteudo__button {
   background: none;
   border: none;
   cursor: pointer;
+  width: 150px;
 }
 
 .e-carrosel__conteudo__slider{
   overflow: hidden;
-  width: 1500px;
   display: grid;
   align-items: end;
   position: relative;
@@ -31,10 +33,6 @@
 .e-slide__item{
   width: 25%;
   position: relative;
-}
-
-.e-slide__item img{
-  width: 1300px;
 }
 
 .e-navigation{
@@ -107,4 +105,26 @@ label:hover{
 
 #slide3:checked ~ .e-navigation-auto .auto-btn-3 {
   background: #ffff;
+}
+
+
+@media(max-width: 1000px){
+  .e-carrosel__conteudo {
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  label, .e-navigation-auto div{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    border-width: 1px;
+  }
+}
+
+@media(max-width: 500px){
+  label, .e-navigation-auto div{
+   display: none;
+  }
 }
