@@ -18,6 +18,7 @@ btnHambuger.addEventListener("touchstart", toggleMenu)
 const buttonNext = document.querySelector('[data-js="btn-next"]')
 const buttonPrev = document.querySelector('[data-js="btn-prev"]')
 const navButtons = document.querySelectorAll('[data-js="nav-button"]')
+const responsiveValueSlide = window.matchMedia('(max-width:800px)')
 
 let numberSlide = 0
 
@@ -48,6 +49,8 @@ const prevSlide = () => {
   manipulateSlide(countSlidePrevRestart, initialValue)
 }
 
-setInterval(nextSlide, 2500)
-buttonNext.addEventListener("click", nextSlide)
-buttonPrev.addEventListener('click', prevSlide)
+if(!responsiveValueSlide.matches){
+  setInterval(nextSlide, 2500)
+  buttonNext.addEventListener('click', nextSlide)
+  buttonPrev.addEventListener('click', prevSlide)
+}
