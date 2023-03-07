@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Pukks</title>
+</head>
+
+<body>
+  <header class="c-header">
+    <nav class="c-header__menu">
+      <ul class="e-menu__list" data-js="menu-list">
+        <li class="menu__list__item"><a href="#">MASCULINO</a></li>
+        <li class="menu__list__item"><a href="#">FEMININO</a></li>
+        <li class="menu__list__item"><a href="#">ESPORTES</a></li>
+      </ul>
+      <h1 class="e-menu__title">PUKKS</h1>
+      <ul class="e-menu__imgs">
+        <a href="#"><img src="./img/icon/carrinho-carrinho 1.png" alt="carrinho de compras" width="30" height="30"></a>
+        <a href="#"><img src="./img/icon//conta 1.png" alt="fazer login na conta" width="30" height="30"></a>
+        <button class="e-menu__btn-hambuger" data-js="btn-hambuger">
+          <span class="e-btn-hambuger__icon"></span>
+        </button>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="c-principal">
+    <section class="c-principal__carrosel">
+      <div class="e-carrosel__conteudo u-container">
+        <button class="e-carrosel__conteudo__button " data-js="btn-prev">
+          <img src="./img/icon/left-arrow.svg" alt="seta para direita">
+        </button>
+
+        <div class="e-carrosel__conteudo__slider">
+
+          <input type="radio" name="slide" id="slide1" data-js="nav-button" checked>
+          <input type="radio" name="slide" id="slide2" data-js="nav-button">
+          <input type="radio" name="slide" id="slide3" data-js="nav-button">
+
+          <div class="e-slide">
+            <div class="e-slide__item first">
+              <img src="https://via.placeholder.com/1500x600.png?text=image+slide+1" alt="">
+            </div>
+            <div class="e-slide__item">
+              <img src="https://via.placeholder.com/1500x600.png?text=image+slide+2" alt="">
+            </div>
+            <div class="e-slide__item">
+              <img src="https://via.placeholder.com/1500x600.png?text=image+slide+3" alt="">
+            </div>
+          </div>
+
+          <div class="e-navigation-auto">
+            <div class="auto-btn-1"></div>
+            <div class="auto-btn-2"></div>
+            <div class="auto-btn-3"></div>
+          </div>
+
+          <div class="e-navigation">
+            <label for="slide1" class="manual-btn-1"></label>
+            <label for="slide2" class="manual-btn-2"></label>
+            <label for="slide3" class="manual-btn-3"></label>
+          </div>
+        </div>
+
+        <button class="e-carrosel__conteudo__button" data-js="btn-next">
+          <img src="./img/icon/right-arrow.svg" alt="seta para direita">
+        </button>
+      </div>
+    </section>
+
+    <section class="c-principal__cards u-container">
+      <h2 class="e-cards__title">Feita para você.</h2>
+
+      <div class="e-cards__conteudo">
+        <div class="e-cards__conteudo__item">
+          <h2 class="e-cards__conteudo__item__title">MASCULINO</h2>
+          <img src="./img/banners/masculino.png" alt="">
+        </div>
+
+        <div class="e-cards__conteudo__item">
+          <h2 class="e-cards__conteudo__item__title">FEMININO</h2>
+          <img src="./img/banners/feminino.png" alt="">
+        </div>
+
+        <div class="e-cards__conteudo__item col-2">
+          <h2 class="e-cards__conteudo__item__title">ESPORTES</h2>
+          <img src="./img/banners/esportes.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="c-principal__marcas">
+      <div class="e-marcas__banner">
+        <h2 class="e-marcas__banner__title">MELHORES MARCAS</h2>
+      </div>
+    </section>
+  </main>
+
+</body>
+<script src="./js/index.js" type="module"></script>
+</html>
