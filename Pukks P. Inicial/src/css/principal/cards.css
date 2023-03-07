@@ -1,6 +1,8 @@
 
 .e-cards__conteudo {
   display: grid;
+  max-width: 1000px;
+  margin: auto;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   gap: 60px;
   padding: 0 100px;
@@ -8,6 +10,7 @@
 
 .e-cards__title {
   font-size: 10rem;
+  padding: 0 10px;
   max-width: 50rem;
   margin-bottom: 100px;
   color: #141414;
@@ -34,7 +37,7 @@
 .e-cards__conteudo__item__title {
   color: #fff;
   font-weight: 100;
-  font-size: 4rem;
+  font-size: 3rem;
   position: absolute;
   letter-spacing: 10px;
 }
@@ -55,21 +58,17 @@
     font-size: 6rem;
     margin-bottom: 60px;
   }
-  .e-cards__conteudo__item__title {
-    font-size: 3rem;
-  }
 }
 
 @media(max-width:800px){
   .e-cards__conteudo__item__title {
     font-size: 2rem;
   }
-
   .e-cards__conteudo {
     display: flex;
     gap: 20px;
     padding: 0 50px;
-    max-width: min(95vw);
+    max-width: calc(100% - 20px);
     overflow-x: scroll;
   }
 

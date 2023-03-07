@@ -123,6 +123,11 @@ label:hover{
 }
 
 @media(max-width: 800px){
+  .e-carrosel__conteudo {
+    padding-top: 64px;
+    padding-bottom: 0;
+  }
+
   .e-carrosel__conteudo__button {
     display: none;
   }

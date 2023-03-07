@@ -7,13 +7,15 @@
   display: flex;
   justify-content: center;
   background-image: url('../../img/banners/image8.png');
-  padding-top: 200px;
-  padding-bottom: 200px;
+  background-position: center;
+  padding-top: 160px;
+  padding-bottom: 160px;
 }
 
 .e-marcas__banner__title{
- font-size: 15rem;
- text-align: center;
+  font-size: min(10rem, 10vw);
+  text-align: center;
+  position: relative;
 }
 
 .e-marcas__banner__title::after{
@@ -21,24 +23,17 @@
   width: 100%;
   display: block;
   background: #fff;
-  height: 10px;
-  position: relative;
-  top: 0;
+  height: min(0.5vh);
+  position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
 
-@media(max-width:1000px){
-  .e-marcas__banner__title{
-    font-size: 10rem;
-    text-align: center;
-   }
-}
-
-@media(max-width:800px){
-  .e-marcas__banner__title{
-    font-size: 5rem;
-    text-align: center;
-   }
+@media(max-width:500px){
+  .e-marcas__banner{
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
