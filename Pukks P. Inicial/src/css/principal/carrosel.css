@@ -64,21 +64,6 @@ label:hover{
   transition: 0.5s;
 }
 
-#slide1:checked ~ .e-slide {
-  transform: translateX(0);
-  transition: 0.5s ease;
-}
-
-#slide2:checked ~ .e-slide {
-  transform: translateX(-100%);
-  transition: 0.5s ease;
-}
-
-#slide3:checked ~ .e-slide {
-  transform: translateX(-200%);
-  transition: 0.5s ease;
-}
-
 .e-navigation-auto div{
   border: 3px solid;
   border-radius: 100%;
@@ -108,6 +93,23 @@ label:hover{
   background: #ffff;
 }
 
+
+@media(min-width: 800px){
+  #slide1:checked ~ .e-slide {
+    transform: translateX(0);
+    transition: 0.5s ease;
+  }
+  
+  #slide2:checked ~ .e-slide {
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+  }
+  
+  #slide3:checked ~ .e-slide {
+    transform: translateX(-200%);
+    transition: 0.5s ease;
+  }
+}
 
 @media(max-width: 1000px){
   .e-carrosel__conteudo {
@@ -140,11 +142,13 @@ label:hover{
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
 
   .e-slide__item{
     scroll-snap-align: start;
+    pointer-events: none;
   }
 
   .e-slide__item img{

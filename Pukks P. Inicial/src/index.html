@@ -63,9 +63,9 @@
           </div>
 
           <div class="e-navigation">
-            <label for="slide1" class="manual-btn-1"></label>
-            <label for="slide2" class="manual-btn-2"></label>
-            <label for="slide3" class="manual-btn-3"></label>
+            <label for="slide1" class="manual-btn-1" data-js="slide-item-buttons"></label>
+            <label for="slide2" class="manual-btn-2" data-js="slide-item-buttons"></label>
+            <label for="slide3" class="manual-btn-3" data-js="slide-item-buttons"></label>
           </div>
         </div>
 
@@ -100,9 +100,40 @@
       <div class="e-marcas__banner">
         <h2 class="e-marcas__banner__title">MELHORES MARCAS</h2>
       </div>
+
+      <div class="e-marcas__slider">
+        <div class="e-marcas__slide__conteudo">
+          <button class="e-marcas__slide__conteudo__button" data-js="btn-prevMarca"><img src="./img/icon/seta-esquerda.png" alt="" width="50px" height="50px"></button>
+
+          <ul class="e-marcas__slide__conteudo__container">
+            <li class="e-marcas__slide__conteudo__container__item">
+              <a href=""><img src="./img/logos_marcas/jordan-2.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item">
+              <a href=""><img src="./img/logos_marcas/nike-11.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item">
+              <a href=""><img src="./img/logos_marcas/adidas-9.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item">
+              <a href=""><img src="./img/logos_marcas/lacoste-logo.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item">
+              <a href=""><img src="./img/logos_marcas/puma-logo.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item">
+              <a href=""><img src="./img/logos_marcas/calvin-klein-2017-logo.svg" alt="" width="100" height="100"></a>
+            </li>
+
+          </ul>
+
+          <button class="e-marcas__slide__conteudo__button" data-js="btn-nextMarca"><img src="./img/icon/seta-direita.png" alt="" width="50px" height="50px"></button>
+        </div>
+      </div>
     </section>
   </main>
 
 </body>
 <script src="./js/index.js" type="module"></script>
+
 </html>
