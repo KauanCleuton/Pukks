@@ -35,6 +35,14 @@
   padding-bottom: 140px;
 }
 
+.e-marcas__slider__title{
+  color: black;
+  font-size: 5rem;
+  margin-bottom: 70px;
+  padding: 0 10px;
+  text-align: center;
+}
+
 .e-marcas__slide__conteudo__button{
   background: none;
   border: none;
@@ -84,16 +92,12 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  /* .e-marcas__slide__conteudo__button{
-   display: none;
-  } */
 
   .e-marcas__slide__conteudo{
     padding: 30px;
   }
 
   .e-marcas__slide__conteudo__container{
-    overflow-x:scroll;
     gap: 50px;
   }
 
@@ -108,5 +112,9 @@
   .e-marcas__banner{
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+  .e-marcas__slider__title{
+    font-size: 3rem;
+    margin-bottom: 10px;
   }
 }

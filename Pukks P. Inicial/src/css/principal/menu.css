@@ -64,6 +64,34 @@
   display: flex;
 }
 
+.e-menu__imgs__item{
+  position: relative;
+}
+
+.e-menu__imgs__item:hover > .e-menu__conta__dropdown{
+  animation: fadeTopAnimation 0.3s ease-in-out both;
+}
+
+.e-menu__conta__dropdown{
+  opacity: 0;
+  background: #141414;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.e-menu__conta__dropdown__item a{
+  padding: 10px 15px;
+  text-transform: capitalize;
+  transition: 0.3s ease;
+}
+
+.e-menu__conta__dropdown__item:hover{
+  background: #2b2a2a;
+}
+
 @media (max-width: 1000px) {
   .e-menu__imgs {
     gap: 20px;

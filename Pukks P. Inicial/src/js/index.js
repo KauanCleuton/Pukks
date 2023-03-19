@@ -19,6 +19,9 @@ const buttonPrev = document.querySelector('[data-js="btn-prev"]')
 const navButtons = document.querySelectorAll('[data-js="nav-button"]')
 const responsiveValueSlide = window.matchMedia("(max-width:800px)")
 
+const containerSlide = document.querySelector('[data-js="container-slide"]')
+const slideWidth = containerSlide.clientWidth
+
 let numberSlide = 0
 
 const modifySlide = (index, button) =>
@@ -43,8 +46,7 @@ const nextSlide = () => {
 
 const prevSlide = () => {
   numberSlide--
-  const countSlidePrevRestart =
-    numberSlide < navButtons.length - navButtons.length
+  const countSlidePrevRestart = numberSlide < navButtons.length - navButtons.length
   const initialValue = navButtons.length - 1
   manipulateSlide(countSlidePrevRestart, initialValue)
 }
@@ -53,54 +55,51 @@ if (!responsiveValueSlide.matches) {
   setInterval(nextSlide, 2500)
   buttonNext.addEventListener("click", nextSlide)
   buttonPrev.addEventListener("click", prevSlide)
-}
-
-// mobile toggle slide
-
-const containerSlide = document.querySelector('[data-js="container-slide"]')
-const containerButtonSlide = document.querySelectorAll(
-  '[data-js="slide-item-buttons"]'
-)
-const slideWidth = 500
-
-containerButtonSlide.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    containerSlide.scrollTo(slideWidth * index, 0)
+}else {
+  navButtons.forEach((button, index) => {
+    const scrollSlide = () =>{
+      containerSlide.scrollTo(slideWidth * index, 0)
+      button.checked
+    }
+    button.addEventListener("click", scrollSlide)
   })
-})
-
-containerSlide.addEventListener("wheel", (event) => {
-  if (event.deltaY > 0) {
-    event.target.scrollBy(300, 0)
-  } else {
-    event.target.scrollBy(-300, 0)
-  }
-})
+}
 
 // marcas slide
 
-const buttonNextMarcas = document.querySelector('[data-js="btn-nextMarca"]')
-const buttonPrevMarcas = document.querySelector('[data-js="btn-prevMarca"]')
-const marcasItems = document.querySelectorAll(".e-marcas__slide__conteudo__container__item")
-const containerMarcas = document.querySelector(".e-marcas__slide__conteudo__container")
+const marcasItems = document.querySelectorAll('[data-js="marcas_slide_item"]')
+const containerMarcas = document.querySelector('[data-js="slide_marcas_conteudo"]')
 
 let countSlideMarca = 0
 
-buttonNextMarcas.addEventListener("click", (event) => {
-  const slideShowTo = Math.round(containerMarcas.clientWidth / 230)
-  if (countSlideMarca < (marcasItems.length - slideShowTo) * marcasItems[0].clientWidth + 100) {
-    countSlideMarca += marcasItems[0].clientWidth + 100
-    marcasItems.forEach(
-      (item) => (item.style.transform = `translate(-${countSlideMarca}px)`)
+const translateSlide = (widthItem) => {
+ marcasItems.forEach(
+      (item) => (item.style.transform = `translate(-${widthItem * countSlideMarca}px)`)
     )
-  }
-})
+}
 
-buttonPrevMarcas.addEventListener("click", (event) => {
-  if (countSlideMarca > 0) {
-    countSlideMarca -= marcasItems[0].clientWidth + 100
+const slideMarcasEvent = ({target}) => {
+  const slideItemWidth = marcasItems[0].offsetWidth * 1.8
+  const slideShowTo = Math.floor(containerMarcas.clientWidth / slideItemWidth)
+
+  console.log(slideItemWidth)
+  console.log(slideShowTo)
+  if(target.dataset.js === 'btn-nextMarca'){
+    const itemsHiddenInSlideMarcas = countSlideMarca < marcasItems.length - slideShowTo
+    if (itemsHiddenInSlideMarcas) {
+      countSlideMarca++
+      translateSlide(slideItemWidth)
+    }
   }
-  marcasItems.forEach(
-    (item) => (item.style.transform = `translate(-${countSlideMarca}px)`)
-  )
-})
+
+  if(target.dataset.js === 'btn-prevMarca'){
+    if (countSlideMarca > 0) {
+      countSlideMarca--
+      translateSlide(slideItemWidth)
+    }
+  }
+}
+
+containerMarcas.addEventListener("click", slideMarcasEvent)
+
+
