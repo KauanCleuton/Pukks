@@ -46,30 +46,30 @@
   position: absolute;
 }
 
-input{
+.e-carrosel__conteudo__slider input{
   display: none;
 }
 
-label{
+.e-navigation label{
   display: block;
   border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
   background: transparent;
-  border: 3px solid #ffff;
+  border: 2px solid #ffff;
   cursor: pointer;
 }
 
-label:hover{
+.e-navigation label:hover{
   background: #ffff;
   transition: 0.5s;
 }
 
 .e-navigation-auto div{
-  border: 3px solid;
+  border: 2px solid;
   border-radius: 100%;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -118,7 +118,7 @@ label:hover{
     gap: 10px;
   }
 
-  label, .e-navigation-auto div{
+  .e-navigation label, .e-navigation-auto div{
     width: 15px;
     height: 15px;
     padding: 5px;

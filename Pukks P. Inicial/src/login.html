@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Pukks - Login</title>
+</head>
+
+<body>
+  <header class="c-header">
+    <h1 class="e-menu__title"><a href="./index.html">PUKKS</a></h1>
+  </header>
+
+  <main class="c-login_principal">
+    <div class="c-login_container">
+      <div class="c-login_container__box_banner">
+        <h2 class="e-box_banner__title">PUKKS</h2>
+        <p class="e-box_banner__subtitle">Seja Bem-Vindo</p>
+      </div>
+      <div class="c-login_container__box_inputs">
+        <h2 class="e-box_inputs__title">Login</h2>
+        <form action="login.php" method="get" class="e-box_inputs__form" data-js="form_login">
+          <div class="e-form__input_box">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" class="email e-form__ipunt_box__input">
+          </div>
+          <div class="e-form__input_box">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" class="password e-form__ipunt_box__input">
+          </div>
+          <button class="e-form__button">Entrar</button>
+          <span class="e-form__link_register">Ainda não tem conta? <a href="#" class="e-form__link_register__link">Criar Conta</a></span>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="c-rodape">
+    <h2 class="e-rodape__title">PUKKS</h2>
+    <nav class="e-rodape__nav">
+
+      <h3 class="e-rodape__nav__social__title">siga-nos</h3>
+      <ul class="e-rodape__nav__social">
+        <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/twitter.png" alt="twitter"></a></li>
+        <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/instagram.png" alt="instagram"></a></li>
+        <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/facebook.png" alt="facebook"></a></li>
+      </ul>
+      
+      <h3 class="e-rodape__nav__about__title">sobre a pukks</h3>
+      <ul class="e-rodape__nav__about">
+        <li class="e-nav__about__item"><a href="">quem somos</a></li>
+        <li class="e-nav__about__item"><a href="">contato</a></li>
+        <li class="e-nav__about__item"><a href="">termos de uso</a></li>
+      </ul>
+    </nav>
+    <p class="e-rodape__terms">Todos os direitos reservados. PUKKS © 2023. Todos os preços incluem taxas sobre as vendas. Nenhum direito pode derivar de uma informação contida neste site.</p>
+</footer>
+<script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -41,6 +41,12 @@ img{
     grid-column: 1/-1;
 }
 
+.incorrect_input--active{  
+    color: red;
+    font-size: min(1.5rem, 4vw);
+    text-align: center;
+}
+
 /* .c-principal {
     width: 100%;
     height: 100vh;
