@@ -1,4 +1,3 @@
-if(document.URL === 'http://127.0.0.1:5500/Pukks%20P.%20Inicial/src/index.html#'){
   // mobile menu
   const btnHambuger = document.querySelector('[data-js="btn-hambuger"]')
   const menu = document.querySelector('[data-js="menu-list"]')
@@ -101,7 +100,7 @@ if(document.URL === 'http://127.0.0.1:5500/Pukks%20P.%20Inicial/src/index.html#'
   }
   
   containerMarcas.addEventListener("click", slideMarcasEvent)
-}
+
 
 
 // login page

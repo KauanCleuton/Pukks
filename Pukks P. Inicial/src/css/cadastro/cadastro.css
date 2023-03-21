@@ -1,0 +1,42 @@
+.e-box_inputs__form-cadastro{
+  display: flex;
+  padding: 10rem;
+  flex-direction: row;
+  justify-content: start;
+  gap: 100px;
+  max-width: 800px;
+  overflow-x: hidden;
+}
+
+.e-form__cadastro-1__container-inputs,
+.e-form__cadastro-2__container-inputs{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 30px;
+}
+
+
+.c-cadastro_container{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;  
+}
+
+.e-form__title{
+  text-transform: capitalize;
+  font-size: min(6rem, 13vw);
+}
+
+
+.e-form__cadastro-2{
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+
+.e-form__cadastro-2__buttons{
+  display: flex;
+  gap: 30px;    
+}
