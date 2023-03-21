@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Página de Cadastro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="headerMenu">
+    <nav class="menu">
+      <h1 class="h1Menu">PUKKS</h1>
+    </nav>
+  </header>
+
+
+  <main class="c-principal">
+    <div class="container">
+      <div class="form-image">
+        <p class="principal">PUKKS</p>
+        <p class="secundario">Cadastre-se</p>
+      </div>
+      <div class="form" id="formBoxOne">
+        <form method="POST">
+          <div class="form-header">
+            <div class="title">
+              <h1>Vamos Começar...</h1>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="input-box">
+              <label for="nome">Primeiro nome</label>
+              <input id="firstname" type="text" name="firstname" placeholder="Digite o primeiro nome" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="sobrenome">Sobrenome</label>
+              <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="cep">CEP:</label>
+              <input id="cep" type="text" name="number" placeholder="EX. 12345000" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="endereco">Endereço:</label>
+              <input id="endereco" type="text" name="endereco" placeholder="EX. Avenida das Graças" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="residencia">Número da Residência:</label>
+              <input id="residencia" type="number" name="residencia" placeholder="EX. 93" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="bairro">Bairro:</label>
+              <input id="bairro" type="text" name="bairro" placeholder="EX. Centro" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="complemento">Complemento:</label>
+              <input id="complemento" type="text" name="complemento" placeholder="EX. Casa, Apartamento..." required>
+            </div>
+  
+            <div class="input-box">
+              <label for="estado">Estado:</label>
+              <input id="estado" type="text" name="estado" placeholder="Insira o CEP acima para preencher este campo"
+                required>
+            </div>
+  
+            <div class="input-box">
+              <label for="cidade">Cidade:</label>
+              <input id="cidade" type="text" name="cidade" placeholder="Insira o CEP acima para preencher este campo"
+                required>
+            </div>
+          </div>
+          <div class="continue-button">
+            <button id="buttonProceed"><a href="">Prosseguir</a></button>
+          </div>
+        </form>
+      </div>
+
+      <div class="c-form-box2 hide" id="formBoxTwo">
+        <form method="POST" class="e-form-box2">
+          <div class="form-header">
+            <div class="title">
+              <h1>Quase Lá...</h1>
+            </div>
+          </div>
+          <div class="e-input-group">
+            <div class="input-box">
+              <label for="email">Email:</label>
+              <input id="email" type="email" name="email" placeholder="Ex. exemplo@gmail.com" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="telefone">Telefone:</label>
+              <input id="telefone" type="text" name="telefone" placeholder="Ex. (DDD) X XXXX-XXXX" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="senha">Senha:</label>
+              <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+            </div>
+  
+            <div class="input-box">
+              <label for="senha">Confirmar Senha:</label>
+              <input id="senha" type="password" name="senha" placeholder="Confirme sua senha"
+                required>
+            </div>
+
+          </div>
+          <div class="e-continue-button_form">
+            <button class="e-button__voltar" id="buttonBack">Voltar</button>
+            <button class="e-button__avancar" >Cadastrar</button>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="./js/index.js"></script>
+</html>
