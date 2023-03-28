@@ -76,25 +76,6 @@
   font-family: 'Roboto', sans-serif;
   font-size: min(1.8rem, 4vw);
 }
-.e-form__button {
-  text-align: center;
-  text-transform: capitalize;
-  padding: 1.2rem 4.4rem;
-  border: none;
-  background-color: #141414;
-  color: #fff;
-  border-radius: 6px;
-  font-size: 1.9rem;
-  cursor: pointer;
-  transition: background .3s ease-in-out;
-  box-shadow: 0 9px 1.6rem -8px #141414;
-  margin-top: 30px;
-}
-.e-form__button:hover {
-  background-color: transparent;
-  color: #141414;
-  box-shadow: 0px 0px 0px 2px #141414;
-}
 .e-form__link_register {
   font-weight: 400;
   font-size: min(1.5rem, 4vw);

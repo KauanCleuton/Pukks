@@ -24,9 +24,9 @@
         <p class="e-box_banner__subtitle">Cadastre-se</p>
       </div>
       <div class="c-cadastro_container__box_inputs u-container__box_inputs">
-        <form action="cadastro.php" method="post" class="e-box_inputs__form-cadastro">
+        <form action="cadastro.php" method="post" class="e-box_inputs__form-cadastro" data-js="form_cadastro">
           
-          <div class="e-form__cadastro-1">
+          <div class="e-form__cadastro-1 ">
             <h2 class="e-form__title u-form-title">vamos começar...</h2>
 
             <div class="e-form__cadastro-1__container-inputs">
@@ -60,10 +60,10 @@
               </div>
             </div>
             
-            <span class="e-form__button">prosseguir</span>
+            <span class="u-button_type-1" data-js="form_next">prosseguir</span>
           </div>
 
-          <div class="e-form__cadastro-2">
+          <div class="e-form__cadastro-2 u-form__cadastro--hidden">
             <h2 class="e-form__title u-form-title">quase lá...</h2>
 
             <div class="e-form__cadastro-2__container-inputs">
@@ -95,8 +95,8 @@
             </div>
             
             <div class="e-form__cadastro-2__buttons">
-              <span class="e-form__button">voltar</span>
-              <button class="e-form__button">cadastrar</button>
+              <span class="u-button_type-1 u-button_type-2" data-js="form_prev">voltar</span>
+              <button class="u-button_type-1">cadastrar</button>
             </div>
           </div>
         </form>
@@ -124,7 +124,7 @@
     </nav>
     <p class="e-rodape__terms">Todos os direitos reservados. PUKKS © 2023. Todos os preços incluem taxas sobre as vendas. Nenhum direito pode derivar de uma informação contida neste site.</p>
 </footer>
-<script src="./js/index.js"></script>
+<script src="./js/cadastro.js"></script>
 </body>
 
 </html>
