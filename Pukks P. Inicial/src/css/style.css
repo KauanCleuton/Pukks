@@ -1,5 +1,6 @@
 @import url('./global.css');
 @import url('./animations.css');
+@import url('./forms.css');
 
 /* principal */
 @import url('./principal/menu.css');
