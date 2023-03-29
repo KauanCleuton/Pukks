@@ -1,61 +1,82 @@
 .c-form_principal {
-    background-color: #1e1e1e;
-    display: flex;
-    place-content: center;
-    padding-top: 120px;
-    padding-bottom: 120px;
+  background-color: #1e1e1e;
+  display: flex;
+  place-content: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
-.c-form_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-radius: 8px;
-    box-shadow: -2px 8px 18px -8px #141414;
+.c-form_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  box-shadow: -2px 8px 18px -8px #141414;
 }
 .c-form_container__box_banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    place-content: center;
-    background-color: #141414;
-    border-radius: 8px 0 0 8px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-content: center;
+  background-color: #141414;
+  border-radius: 8px 0 0 8px;
+}
 
 .e-box_banner__title {
-    font-size: 7rem;
-    font-weight: 100;
+  font-size: 7rem;
+  font-weight: 100;
 }
 .e-box_banner__subtitle {
-    font-size: 2.3rem;
+  font-size: 2.3rem;
 }
 
-.u-container__box_inputs{
-    background-color: #fff;
-    border-radius: 0 8px 8px 0;
-    position: relative;
+.u-container__box_inputs {
+  background-color: #fff;
+  border-radius: 0 8px 8px 0;
+  position: relative;
 }
-  
-.u-form-title{
-    color: #141414;
-    font-weight: 100;
+
+.u-form-title {
+  color: #141414;
+  font-weight: 100;
 }
 
 .e-form__input_box {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.e-form__input_box label {
+  font-size: min(2rem, 5vw);
+  color: #141414;
+}
+
+.e-form__ipunt_box__input {
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0.2rem 1.4rem 5px #7e7b7b;
+  padding: 1.2rem 1rem;
+  width: min(60vw, 30rem);
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-size: min(1.8rem, 4vw);
+}
+
+@media (max-width: 1037px) {
+  .c-form_container__box_banner {
+    display: none;
   }
-  .e-form__input_box label {
-    font-size: min(2rem, 5vw);
-    color: #141414;
+  .c-form_container {
+    grid-template-columns: 1fr;
+    box-shadow: 2px 0px 57px -12px #141414;
+  }
+  .u-container__box_inputs{
+    border-radius: 8px;
+  }
+
+  .e-box_inputs__form {
+    padding: 3rem;
   }
 
   .e-form__ipunt_box__input {
-    border: none;
-    border-radius: 7px;
-    box-shadow: 0 .2rem 1.4rem 5px #7e7b7b;
-    padding: 1.2rem 1rem;
-    width: min(60vw, 30rem);
-    outline: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: min(1.8rem, 4vw);
+    margin-top: 10px;
   }
+}
