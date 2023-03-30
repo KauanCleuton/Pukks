@@ -18,3 +18,23 @@ formRegister.addEventListener('click', event => {
     manipulatedBoxForms()
   }
 })
+
+$(document).ready(function(){
+  $('#telefone').inputmask({"mask": "(99) 9999-9999"});
+  $('#email').inputmask({
+    mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+    greedy: false,
+    onBeforePaste: function (pastedValue) {
+      pastedValue = pastedValue.toLowerCase();
+      return pastedValue.replace("mailto:", "");
+    },
+    definitions: {
+      '*': {
+        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+        cardinality: 1,
+        casing: "lower"
+      }
+    }
+  });
+
+});
