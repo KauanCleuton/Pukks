@@ -20,9 +20,26 @@ formRegister.addEventListener('click', event => {
 })
 
 $(document).ready(function(){
-  $('#telefone').inputmask({"mask": "(99) 9999-9999"});
+  $('#cep').inputmask({mask: "99999-999", jitMasking: true});
+  $('#numero-residencia').inputmask({
+    mask: '9{1,5}a', 
+    jitMasking: true,
+    definitions: {"a":{casing: "upper"}}
+  })
+  $('#estado').inputmask({
+    mask: "a{1,2}",
+    jitMasking: true,
+    definitions: {"a":{casing: "upper"}}
+  })
+  $('#cidade').inputmask({
+    mask: "a{1,20}", 
+    jitMasking: true,
+    definitions: {'a':{ validator: '[A-Za-zà-úÀ-Ú ]', casing: 'upper'}}
+  })
+  $('#telefone').inputmask({mask: "(99) 99999-9999", jitMasking: true});
   $('#email').inputmask({
     mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+    jitMasking: true,
     greedy: false,
     onBeforePaste: function (pastedValue) {
       pastedValue = pastedValue.toLowerCase();
