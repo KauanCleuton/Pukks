@@ -12,3 +12,15 @@
     opacity: 1;
   }
 }
+
+@keyframes shakeInvalidInput{
+    0%{
+      transform: translateX(1.5px);
+    }
+    50%{
+      transform: translateX(-1.5px);
+    }
+    100%{
+      transform: translateX(0px);
+    }
+}

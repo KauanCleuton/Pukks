@@ -60,6 +60,16 @@
   font-size: min(1.8rem, 4vw);
 }
 
+.u-invalid_form_text{
+  color: red;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.u-invalid_form {
+  border: 3px solid red;
+  animation: shakeInvalidInput 0.3s ease-in-out both;
+}
+
 @media (max-width: 1037px) {
   .c-form_container__box_banner {
     display: none;
