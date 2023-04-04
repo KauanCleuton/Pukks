@@ -1,0 +1,160 @@
+.c-principal__carrosel {
+  background: linear-gradient(#141414 65%, #ffff 35%);
+}
+
+.e-carrosel__conteudo {
+  max-width:1500px;
+  display: flex;
+  gap: 30px;
+  position: relative;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.e-carrosel__conteudo__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+}
+
+.e-carrosel__conteudo__slider{
+  display: grid;
+  overflow: hidden;
+  align-items: end;
+  position: relative;
+}
+
+.e-slide{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%; 
+  align-items: end;
+}
+
+.e-slide__item{
+  flex: 0 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.e-navigation{
+  display: flex;
+  justify-self: center;
+  gap: 30px;
+  padding: 20px;
+  position: absolute;
+}
+
+.e-carrosel__conteudo__slider input{
+  display: none;
+}
+
+.e-navigation label{
+  display: block;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  background: transparent;
+  border: 2px solid #ffff;
+  cursor: pointer;
+}
+
+.e-navigation label:hover{
+  background: #ffff;
+  transition: 0.5s;
+}
+
+.e-navigation-auto div{
+  border: 2px solid;
+  border-radius: 100%;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.e-navigation-auto {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  padding: 20px;
+}
+
+#slide1:checked ~ .e-navigation-auto .auto-btn-1 {
+  background: #ffff;
+}
+
+#slide2:checked ~ .e-navigation-auto .auto-btn-2 {
+  background: #ffff;
+}
+
+#slide3:checked ~ .e-navigation-auto .auto-btn-3 {
+  background: #ffff;
+}
+
+
+@media(min-width: 800px){
+  #slide1:checked ~ .e-slide {
+    transform: translateX(0);
+    transition: 0.5s ease;
+  }
+  
+  #slide2:checked ~ .e-slide {
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+  }
+  
+  #slide3:checked ~ .e-slide {
+    transform: translateX(-200%);
+    transition: 0.5s ease;
+  }
+}
+
+@media(max-width: 1000px){
+  .e-carrosel__conteudo {
+    gap: 10px;
+  }
+
+  .e-navigation label, .e-navigation-auto div{
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    border-width: 1px;
+  }
+}
+
+@media(max-width: 800px){
+  .e-carrosel__conteudo {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100vw;
+  }
+
+  .e-carrosel__conteudo__button {
+    display: none;
+  }
+
+  .e-carrosel__conteudo__slider{
+    overflow: visible;
+  }
+
+  .e-slide{
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .e-slide__item{
+    scroll-snap-align: start;
+    pointer-events: none;
+  }
+
+  .e-slide__item img{
+    height: 300px;
+  }
+}

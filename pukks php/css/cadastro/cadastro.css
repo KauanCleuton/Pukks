@@ -1,0 +1,74 @@
+.e-box_inputs__form-cadastro {
+  padding: min(10rem,4vw);
+}
+
+.e-form__cadastro-1__container-inputs,
+.e-form__cadastro-2__container-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.c-cadastro_container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.e-form__title {
+  text-transform: capitalize;
+  font-size: min(6rem, 13vw);
+}
+
+.e-form__cadastro-1, .e-form__cadastro-2{
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+}
+
+.e-form__cadastro-2__buttons {
+  justify-self: center;
+  text-align: center;
+  display: flex;
+  gap: 30px;
+}
+
+.u-form__cadastro--hidden {
+  display: none;
+}
+
+@media(max-width: 1000px){
+  .c-cadastro_container {
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width: 900px){
+  .e-form__cadastro-1__container-inputs,
+  .e-form__cadastro-2__container-inputs {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .c-cadastro_container {
+    grid-template-columns:  1fr;
+  }
+}
+
+
+@media(max-width: 600px){
+
+  .e-form__cadastro-1__container-inputs,
+  .e-form__cadastro-2__container-inputs {
+    gap: 20px;
+    padding:20px;
+  }
+
+  .u-container__box_inputs {
+    width: 100vw;
+  }
+
+  .e-form__cadastro-2__buttons {
+    flex-direction: column;
+    gap: 0;
+  }
+}
