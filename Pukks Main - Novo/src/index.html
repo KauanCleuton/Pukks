@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Pukks</title>
+</head>
+
+<body>
+  <header class="c-header">
+    <nav class="c-header__menu">
+      <ul class="e-menu__list" data-js="menu-list">
+        <li class="menu__list__item"><a href="#">MASCULINO</a></li>
+        <li class="menu__list__item"><a href="#">FEMININO</a></li>
+        <li class="menu__list__item"><a href="#">ESPORTES</a></li>
+      </ul>
+      <h1 class="e-menu__title"><a href="">PUKKS</a></h1>
+      <ul class="e-menu__imgs">
+        <li>
+          <a href="#"><img src="./img/icon/carrinho-carrinho 1.png" alt="carrinho de compras" width="30" height="30"></a>
+        </li>
+        <li class="e-menu__imgs__item" data-js="dropdown-button" >
+          <a href="#"><img src="./img/icon//conta 1.png" alt="fazer login na conta" width="30" height="30"></a>
+          <ul class="e-menu__conta__dropdown" data-js="dropdown-menu">
+            <li class="e-menu__conta__dropdown__item"><a href="./login.html">login</a></li>
+            <li class="e-menu__conta__dropdown__item"><a href="./cadastro.html">registrar</a></li>
+          </ul>
+        </li>
+        <button class="e-menu__btn-hambuger" data-js="btn-hambuger">
+          <span class="e-btn-hambuger__icon"></span>
+        </button>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="c-principal">
+    <section class="c-principal__carrosel">
+      <div class="e-carrosel__conteudo u-container">
+        <button class="e-carrosel__conteudo__button " data-js="btn-prev">
+          <img src="./img/icon/left-arrow.svg" alt="seta para direita">
+        </button>
+
+        <div class="e-carrosel__conteudo__slider">
+
+          <input type="radio" name="slide" id="slide1" data-js="nav-button" checked>
+          <input type="radio" name="slide" id="slide2" data-js="nav-button">
+          <input type="radio" name="slide" id="slide3" data-js="nav-button">
+
+          <div class="e-slide" data-js="container-slide">
+            <div class="e-slide__item first">
+              <img src="https://via.placeholder.com/1500x600.png?text=image+slide+1" alt="">
+            </div>
+            <div class="e-slide__item">
+              <img src="https://via.placeholder.com/1500x600.png?text=image+slide+2" alt="">
+            </div>
+            <div class="e-slide__item">
+              <img src="https://via.placeholder.com/1500x600.png?text=image+slide+3" alt="">
+            </div>
+          </div>
+
+          <div class="e-navigation-auto">
+            <div class="auto-btn-1"></div>
+            <div class="auto-btn-2"></div>
+            <div class="auto-btn-3"></div>
+          </div>
+
+          <div class="e-navigation">
+            <label for="slide1" class="e-navigation__label manual-btn-1" data-js="slide-item-buttons"></label>
+            <label for="slide2" class="e-navigation__label manual-btn-2" data-js="slide-item-buttons"></label>
+            <label for="slide3" class="e-navigation__label manual-btn-3" data-js="slide-item-buttons"></label>
+          </div>
+        </div>
+
+        <button class="e-carrosel__conteudo__button" data-js="btn-next">
+          <img src="./img/icon/right-arrow.svg" alt="seta para direita">
+        </button>
+      </div>
+    </section>
+
+    <section class="c-principal__cards u-container">
+      <h2 class="e-cards__title">Feita para você.</h2>
+
+      <div class="e-cards__conteudo">
+        <div class="e-cards__conteudo__item">
+          <h2 class="e-cards__conteudo__item__title">MASCULINO</h2>
+          <img src="./img/banners/masculino.png" alt="">
+        </div>
+
+        <div class="e-cards__conteudo__item">
+          <h2 class="e-cards__conteudo__item__title">FEMININO</h2>
+          <img src="./img/banners/feminino.png" alt="">
+        </div>
+
+        <div class="e-cards__conteudo__item col-2">
+          <h2 class="e-cards__conteudo__item__title">ESPORTES</h2>
+          <img src="./img/banners/esportes.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="c-principal__marcas">
+      <div class="e-marcas__banner">
+        <h2 class="e-marcas__banner__title">MELHORES MARCAS</h2>
+      </div>
+
+      <div class="e-marcas__slider u-container">
+        <h2 class="e-marcas__slider__title">Escolha a sua.</h2>
+
+        <div class="e-marcas__slide__conteudo" data-js="slide_marcas_conteudo">
+
+          <button class="e-marcas__slide__conteudo__button" ><img src="./img/icon/seta-esquerda.png" alt="" width="50px" height="50px" data-js="btn-prevMarca"></button>
+
+          <ul class="e-marcas__slide__conteudo__container">
+            <li class="e-marcas__slide__conteudo__container__item" data-js="marcas_slide_item">
+              <a href=""><img src="./img/logos_marcas/jordan-2.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item" data-js="marcas_slide_item">
+              <a href=""><img src="./img/logos_marcas/nike-11.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item" data-js="marcas_slide_item">
+              <a href=""><img src="./img/logos_marcas/adidas-9.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item" data-js="marcas_slide_item">
+              <a href=""><img src="./img/logos_marcas/lacoste-logo.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item" data-js="marcas_slide_item">
+              <a href=""><img src="./img/logos_marcas/puma-logo.svg" alt="" width="100" height="100"></a>
+            </li>
+            <li class="e-marcas__slide__conteudo__container__item" data-js="marcas_slide_item" data-js="marcas_slide_item">
+              <a href=""><img src="./img/logos_marcas/calvin-klein-2017-logo.svg" alt="" width="100" height="100"></a>
+            </li>
+          </ul>
+
+          <button class="e-marcas__slide__conteudo__button"><img src="./img/icon/seta-direita.png" alt="" width="50px" height="50px" data-js="btn-nextMarca"></button>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="c-rodape">
+        <h2 class="e-rodape__title">PUKKS</h2>
+        <nav class="e-rodape__nav">
+
+          <h3 class="e-rodape__nav__social__title">siga-nos</h3>
+          <ul class="e-rodape__nav__social">
+            <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/twitter.png" alt="twitter"></a></li>
+            <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/instagram.png" alt="instagram"></a></li>
+            <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/facebook.png" alt="facebook"></a></li>
+          </ul>
+          
+          <h3 class="e-rodape__nav__about__title">sobre a pukks</h3>
+          <ul class="e-rodape__nav__about">
+            <li class="e-nav__about__item"><a href="">quem somos</a></li>
+            <li class="e-nav__about__item"><a href="">contato</a></li>
+            <li class="e-nav__about__item"><a href="">termos de uso</a></li>
+          </ul>
+        </nav>
+        <p class="e-rodape__terms">Todos os direitos reservados. PUKKS © 2023. Todos os preços incluem taxas sobre as vendas. Nenhum direito pode derivar de uma informação contida neste site.</p>
+    </footer>
+  </main>
+
+</body>
+<script src="./js/index.js" type="module"></script>
+
+</html>

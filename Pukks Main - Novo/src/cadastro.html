@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Pukks - Cadastro</title>
+</head>
+
+<body>
+  <header class="c-header">
+    <h1 class="e-menu__title"><a href="./index.html">PUKKS</a></h1>
+  </header>
+
+  <main class="c-login_principal">
+    <div class="c-cadastro_container">
+      <div class="c-login_container__box_banner">
+        <h2 class="e-box_banner__title">PUKKS</h2>
+        <p class="e-box_banner__subtitle">Cadastre-se</p>
+      </div>
+      <div class="c-cadastro_container__box_inputs u-container__box_inputs">
+        <form action="cadastro.php" method="post" class="e-box_inputs__form-cadastro" data-js="form_cadastro">
+          
+          <div class="e-form__cadastro-1 ">
+            <h2 class="e-form__title u-form-title">vamos começar...</h2>
+
+            <div class="e-form__cadastro-1__container-inputs">
+              <div class="e-form__input_box">
+                <label for="cep">Cep:</label>
+                <input type="text" id="cep" name="cep" class="e-form__ipunt_box__input" placeholder="Ex. 12345000">
+              </div>
+              <div class="e-form__input_box">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" class="e-form__ipunt_box__input" placeholder="Ex. Avenida das graças">
+              </div>
+              <div class="e-form__input_box">
+                <label for="numero-residencia">Numero de residência:</label>
+                <input type="text" id="numero-residencia" name="numero-residencia" class="e-form__ipunt_box__input" placeholder="Ex. 93">
+              </div>
+              <div class="e-form__input_box">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" class="e-form__ipunt_box__input" placeholder="Ex. Centro">
+              </div>
+              <div class="e-form__input_box">
+                <label for="end-complemento">Complemento(Opcional):</label>
+                <input type="text" id="end-complemento" name="end-complemento" class="e-form__ipunt_box__input" placeholder="Ex. casa, apartamento...">
+              </div>
+              <div class="e-form__input_box">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" class="e-form__ipunt_box__input" placeholder="Digite Estado">
+              </div>
+              <div class="e-form__input_box col-2">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" class="e-form__ipunt_box__input" placeholder="Digite Cidade">
+              </div>
+            </div>
+            
+            <span class="u-button_type-1" data-js="form_next">prosseguir</span>
+          </div>
+
+          <div class="e-form__cadastro-2 u-form__cadastro--hidden">
+            <h2 class="e-form__title u-form-title">quase lá...</h2>
+
+            <div class="e-form__cadastro-2__container-inputs">
+              <div class="e-form__input_box">
+                <label for="first-name">Primeiro Nome:</label>
+                <input type="text" name="first-name" id="first-name" class="e-form__ipunt_box__input" placeholder="Digite seu primeiro nome">
+              </div>
+              <div class="e-form__input_box">
+                <label for="second-name">Segundo Nome:</label>
+                <input type="text" id="second-name" name="second-name" class="e-form__ipunt_box__input" placeholder="Digite seu segundo nome">
+              </div>
+              <div class="e-form__input_box">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" class="e-form__ipunt_box__input" placeholder="Ex. exemplo@pukks.com">
+              </div>
+              <div class="e-form__input_box">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" class="e-form__ipunt_box__input" placeholder="Ex. (DDD) X XXXX-XXXX">
+              </div>
+              <div class="e-form__input_box">
+                <label for="senha">Senha:</label>
+                <input type="text" id="senha" name="senha" class="e-form__ipunt_box__input" placeholder="Digite a senha">
+              </div>
+              <div class="e-form__input_box">
+                <label for="confirm-senha">Confirme a senha:</label>
+                <input type="text" id="confirm-senha" class="e-form__ipunt_box__input" placeholder="Digite a senha novamente">
+              </div>
+              
+            </div>
+            
+            <div class="e-form__cadastro-2__buttons">
+              <span class="u-button_type-1 u-button_type-2" data-js="form_prev">voltar</span>
+              <button class="u-button_type-1">cadastrar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="c-rodape">
+    <h2 class="e-rodape__title">PUKKS</h2>
+    <nav class="e-rodape__nav">
+
+      <h3 class="e-rodape__nav__social__title">siga-nos</h3>
+      <ul class="e-rodape__nav__social">
+        <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/twitter.png" alt="twitter"></a></li>
+        <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/instagram.png" alt="instagram"></a></li>
+        <li class="e-nav__social__item"><a href=""><img src="./img/redes_sociais/facebook.png" alt="facebook"></a></li>
+      </ul>
+      
+      <h3 class="e-rodape__nav__about__title">sobre a pukks</h3>
+      <ul class="e-rodape__nav__about">
+        <li class="e-nav__about__item"><a href="">quem somos</a></li>
+        <li class="e-nav__about__item"><a href="">contato</a></li>
+        <li class="e-nav__about__item"><a href="">termos de uso</a></li>
+      </ul>
+    </nav>
+    <p class="e-rodape__terms">Todos os direitos reservados. PUKKS © 2023. Todos os preços incluem taxas sobre as vendas. Nenhum direito pode derivar de uma informação contida neste site.</p>
+</footer>
+<script src="./js/cadastro.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+@import url('./global.css');
+@import url('./animations.css');
+
+/* principal */
+@import url('./principal/menu.css');
+@import url('./principal/carrosel.css');
+@import url('./principal/cards.css');
+@import url('./principal/marcas.css');
+@import url('./principal/footer.css');
+@import url('./principal/produtos.css');
+
+/* login */
+@import url('./login/login.css');
+
+/* cadastro */
+@import url('./cadastro/cadastro.css');
