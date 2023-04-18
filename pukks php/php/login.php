@@ -22,12 +22,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
         
         // Define as informações do usuário na sessão
-        $_SESSION["id"] = $usuario["id"];
+        $_SESSION["codUser"] = $usuario["codUser"];
         $_SESSION["nome"] = $usuario["nome"];
         $_SESSION["email"] = $usuario["email"];
         
         // Redireciona o usuário para a página de dashboard
-        header("location: index.phtml");
+        header("location: ../index.html");
+        echo "<p> Bem-vindo, " . $_SESSION["nome"] . "</p>";
     } else {
         // Exibe uma mensagem de erro de login
         echo "E-mail ou senha incorretos";
