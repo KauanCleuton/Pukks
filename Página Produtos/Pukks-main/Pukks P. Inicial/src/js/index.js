@@ -1,13 +1,20 @@
+
+import AsideFiltro from '../js/filtro.js'
+import mobileMenu from './mobileMenu.js'
+
+
+
+
+const asideBar = document.querySelector('.e-aside-nav__filtro')
+const {maniplateAside} = AsideFiltro({})
+asideBar.addEventListener('click', maniplateAside)
+
+
+
 // mobile menu
 const btnHambuger = document.querySelector('[data-js="btn-hambuger"]')
 const menu = document.querySelector('[data-js="menu-list"]')
-const toggleMenu = (event) => {
-  if (event.type === "touchstart") {
-    event.preventDefault()
-  }
-  menu.classList.toggle("isActiveMenu")
-}
-
+const {toggleMenu} = mobileMenu({menu})
 btnHambuger.addEventListener("click", toggleMenu)
 btnHambuger.addEventListener("touchstart", toggleMenu)
 
@@ -103,45 +110,3 @@ containerMarcas.addEventListener("click", slideMarcasEvent)
 
 
 
-// login page
-
-// const formLogin = document.querySelector('[data-js="form_login"]')
-
-// formLogin.addEventListener('submit', event => {
-//   event.preventDefault()
-//   const emailInput = event.target.email.value
-//   const senhaInput = event.target.senha.value
-//   if(){
-
-//   }
-// })
-
-
-
-
-const buttonShow = document.querySelector('#button-show')
-const buttonHide = document.querySelector('#button-hide')
-const TamanhoItens = document.querySelector('#button-itens')
-const asideButtons = document.querySelector('#aside-buttons')
-
-
-buttonHide.addEventListener('click', () => {
-  functions.button_hide()
-})
-
-buttonShow.addEventListener('click', () => {
-  functions.button_show()
-})
-
-const functions = {
-  button_hide: () => {
-    buttonHide.classList.add('u-hide')
-    buttonShow.classList.remove('u-hide')
-    asideButtons.classList.add('u-hide')
-  },
-  button_show: () => {
-    buttonHide.classList.remove('u-hide')
-    buttonShow.classList.add('u-hide')
-    asideButtons.classList.remove('u-hide')
-  }
-}
