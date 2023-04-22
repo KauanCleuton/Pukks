@@ -5,11 +5,15 @@ const inputsFormBox1 = formRegisterBox1.querySelectorAll('input')
 const inputsFormBox2 = formRegisterBox2.querySelectorAll('input')
 
 
-const createMessageText = () => {
-  const textInvalidInput = document.createElement('p')
-  textInvalidInput.setAttribute('class', 'u-invalid_form_text')
-  textInvalidInput.textContent = 'por favor prencha o campo'
-  return textInvalidInput
+const createMessageText = (className, arrayText) => {
+  const array = []
+  arrayText.forEach( text => {
+    const textInvalidInput = document.createElement('p')
+    textInvalidInput.setAttribute('class', className)
+    textInvalidInput.textContent = text
+    array.push(textInvalidInput)
+  })
+  return array
 }
 
 const removeMessageText = (inputs) => {
@@ -25,9 +29,9 @@ const isCompletedForm = (arrayForm) => {
     inputsArray
     .filter(input => !Boolean(input.value))
     .map(input => {
-      const textInvalid = createMessageText()
+      const messageInvalidInput = createMessageText('u-invalid_form_text', ['complete o campo para prosseguir'])
       if(!input.nextElementSibling){
-        input.insertAdjacentElement('afterend',textInvalid)
+        input.insertAdjacentElement('afterend',...messageInvalidInput)
       }      
       input.classList.add('u-invalid_form')
     })
@@ -39,12 +43,43 @@ const manipulatedBoxForms = () => {
   formRegisterBox2.classList.toggle('u-form__cadastro--hidden')
 }
 
+const confirmPassword = () => {
+  const password = formRegister['senha']
+  const confirmPassword = formRegister['confirm-senha']
+  if(password.value === confirmPassword.value){
+    return true
+  }else{
+    const messageInconfirmPassword = createMessageText('u-invalid_form_text', ['senha incorreta'])
+    confirmPassword.classList.add('u-invalid_form')
+    confirmPassword.insertAdjacentElement('afterend',...messageInconfirmPassword)
+  }
+}
+
+const validPassword = () => {
+  const password = formRegister['senha']
+  const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/
+  const testeRegex = regex.test(password.value)
+  if(!testeRegex){
+    password.classList.add('u-invalid_form')
+    const messageValidPassword = createMessageText('u-invalid_form_text', [
+      'é preciso possuir no minimo 8 caracteres',
+      'possuir numeros ex: 123...',
+      'possuir possuir letras maiusculas ex: ABC...',
+      'e minusculas ex: abc',
+      'possuir caracteres especial ex: @, $, %...'
+    ])
+    messageValidPassword.reverse().forEach(message => password.insertAdjacentElement('afterend', message))
+  }
+}
+
+
 
 const passBoxForm = event => {
   const buttonNextForm = event.target.dataset.js === 'form_next'
   const buttonPrevForm = event.target.dataset.js === 'form_prev'
+  const arrayInputs = [...inputsFormBox1].filter(item => !item.classList.contains('opcional'))
   if(buttonNextForm){
-    if(isCompletedForm(inputsFormBox1)){
+    if(isCompletedForm(arrayInputs)){
       manipulatedBoxForms()
     }
     removeMessageText(inputsFormBox1)
@@ -57,7 +92,7 @@ const passBoxForm = event => {
 
 const submitForm = event => {
   event.preventDefault()
-  if(isCompletedForm(inputsFormBox2)){
+  if(isCompletedForm(inputsFormBox2) && confirmPassword() && validPassword()){
     formRegister.submit()
   }
   removeMessageText(inputsFormBox2)
@@ -70,17 +105,22 @@ const formatedInputsForm = () => {
     mask: '9{1,5}a', 
     jitMasking: true,
     definitions: {"a":{casing: "upper"}}
-  })
+  });
   $('#estado').inputmask({
     mask: "a{1,2}",
     jitMasking: true,
     definitions: {"a":{casing: "upper"}}
-  })
+  });
   $('#cidade').inputmask({
     mask: "a{1,20}", 
     jitMasking: true,
     definitions: {'a':{ validator: '[A-Za-zà-úÀ-Ú ]', casing: 'upper'}}
-  })
+  });
+  $('#bairro').inputmask({
+    mask: "a{1,20}", 
+    jitMasking: true,
+    definitions: {'a':{ validator: '[A-Za-zà-úÀ-Ú ]'}}
+  });
   $('#first-name').inputmask({
     mask:"a{1,20}", 
     jitMasking:true,
