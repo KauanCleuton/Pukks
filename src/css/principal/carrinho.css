@@ -1,0 +1,30 @@
+.e-header__logo {
+    width: auto;
+    height: auto;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.e-header__h1 {
+    font-size: clamp(1rem, 3vw, 3.4rem);
+    font-weight: 500;
+    padding-right: 3rem;
+    border-right: 2px solid #fff;
+}
+.e-header__h2 {
+    font-size: clamp(1rem, 3vw, 2.2rem);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.e-header__botao-continuar {
+    display: inline;
+    padding: 7px;
+}
+.e-header__link {
+    font-size: clamp(1rem, 3vw, 2.2rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 3.2rem;
+}
