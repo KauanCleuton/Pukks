@@ -17,9 +17,9 @@ const createMessageText = (className, arrayText) => {
 }
 
 const removeMessageText = (inputs) => {
-  inputs.forEach( input => input.addEventListener('keyup', () => {
-    input.classList.remove('u-invalid_form')
-    input.nextElementSibling.remove()
+  inputs.forEach( input => input.addEventListener('keyup', ({target}) => {
+    target.classList.remove('u-invalid_form')
+    target.nextElementSibling.remove()
   }))
 }
 
@@ -69,6 +69,8 @@ const validPassword = () => {
       'possuir caracteres especial ex: @, $, %...'
     ])
     messageValidPassword.reverse().forEach(message => password.insertAdjacentElement('afterend', message))
+  }else{
+    return true
   }
 }
 
@@ -79,7 +81,8 @@ const passBoxForm = event => {
   const buttonPrevForm = event.target.dataset.js === 'form_prev'
   const arrayInputs = [...inputsFormBox1].filter(item => !item.classList.contains('opcional'))
   if(buttonNextForm){
-    if(isCompletedForm(arrayInputs)){
+    const completedForm = isCompletedForm(arrayInputs)
+    if(completedForm){
       manipulatedBoxForms()
     }
     removeMessageText(inputsFormBox1)
@@ -92,11 +95,12 @@ const passBoxForm = event => {
 
 const submitForm = event => {
   event.preventDefault()
-  if(isCompletedForm(inputsFormBox2) && confirmPassword() && validPassword()){
+  const completedForm = isCompletedForm(inputsFormBox2) && confirmPassword() && validPassword()
+  if(completedForm){
     formRegister.submit()
   }
   removeMessageText(inputsFormBox2)
-
+  
 }
 
 const formatedInputsForm = () => {
@@ -112,7 +116,7 @@ const formatedInputsForm = () => {
     definitions: {"a":{casing: "upper"}}
   });
   $('#cidade').inputmask({
-    mask: "a{1,20}", 
+    mask: "a{1,20}",
     jitMasking: true,
     definitions: {'a':{ validator: '[A-Za-zà-úÀ-Ú ]', casing: 'upper'}}
   });

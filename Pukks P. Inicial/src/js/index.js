@@ -80,9 +80,7 @@
   const slideMarcasEvent = ({target}) => {
     const slideItemWidth = marcasItems[0].offsetWidth * 1.8
     const slideShowTo = Math.floor(containerMarcas.clientWidth / slideItemWidth)
-  
-    console.log(slideItemWidth)
-    console.log(slideShowTo)
+
     if(target.dataset.js === 'btn-nextMarca'){
       const itemsHiddenInSlideMarcas = countSlideMarca < marcasItems.length - slideShowTo
       if (itemsHiddenInSlideMarcas) {
@@ -100,22 +98,6 @@
   }
   
   containerMarcas.addEventListener("click", slideMarcasEvent)
-
-
-
-// login page
-
-// const formLogin = document.querySelector('[data-js="form_login"]')
-
-// formLogin.addEventListener('submit', event => {
-//   event.preventDefault()
-//   const emailInput = event.target.email.value
-//   const senhaInput = event.target.senha.value
-//   if(){
-
-//   }
-// })
-
 
 
 

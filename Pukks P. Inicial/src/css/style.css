@@ -14,3 +14,8 @@
 
 /* cadastro */
 @import url('./cadastro/cadastro.css');
+
+/* produtos */
+@import url('./produtos/produtos.css');
+@import url('./produtos/produtos_marcas.css');
+@import url('./produtos/produtos_items.css');

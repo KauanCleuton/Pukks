@@ -1,0 +1,24 @@
+.c-produtos_principal{
+  padding-bottom: 10px;
+}
+
+.c-produtos_principal{
+  background: #D2D2D2;
+  padding-left: min(120px, 5vw);
+  padding-right: min(120px, 5vw);
+}
+
+.e-marcas__container,
+.e-lista_produtos__container{
+  background: #fff;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+}
+
+
+@media(max-width:1000px){
+  .e-marcas__container,
+  .e-lista_produtos__container{
+    padding: 10px;
+  }
+}

@@ -27,11 +27,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["email"] = $usuario["email"];
         
         // Redireciona o usuário para a página de dashboard
-        header("location: ../index.html");
-        echo "<p> Bem-vindo, " . $_SESSION["nome"] . "</p>";
+        // header("location: ../index.html");
+        // echo "<p> Bem-vindo, " . $_SESSION["nome"] . "</p>";
     } else {
         // Exibe uma mensagem de erro de login
         echo "E-mail ou senha incorretos";
     }
 }
+$dados = array(
+    "id" => $_SESSION["id"],
+    "nome" => $_SESSION["nome"],
+    "email" => $_SESSION["email"]
+);
+
+$json = json_encode($dados);
+
+header("Content-type: application/json");
 ?>
