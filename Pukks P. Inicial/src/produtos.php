@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <title>Pukks</title>
+  <?php include 'php/consultaProdutos.php'?>
+  <?php include 'php/paginacaoProdutos.php'?>
 </head>
 
 <body>
@@ -62,81 +64,27 @@
           <input type="text" name="search" id="search" placeholder="Buscar...">
         </div>
         <ul class="e-lista_produtos__container__list">
+        <?php foreach ($produtos as $produtos): ?>
           <li class="e-list__item">
             <a href="">
               <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
+                <img src="<?php echo './' . $produtos['caminhoImg'] ?>" alt="">
               </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
+              <p class="e-list__item__texto"><?php echo $produtos['nomeProduto'] ?></p>
+              <span class="e-list__item__preco"> <?php echo 'R$', number_format($produtos['preco'], 2, ',', '.')  ?> </span>
             </a>
           </li>
-          <li class="e-list__item">
-            <a href="">
-              <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
-              </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
-            </a>
-          </li>  <li class="e-list__item">
-            <a href="">
-              <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
-              </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
-            </a>
-          </li>  <li class="e-list__item">
-            <a href="">
-              <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
-              </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
-            </a>
-          </li>  <li class="e-list__item">
-            <a href="">
-              <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
-              </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
-            </a>
-          </li>  <li class="e-list__item">
-            <a href="">
-              <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
-              </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
-            </a>
-          </li>  <li class="e-list__item">
-            <a href="">
-              <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
-              </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
-            </a>
-          </li>  <li class="e-list__item">
-            <a href="">
-              <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
-              </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
-            </a>
-          </li>  <li class="e-list__item">
-            <a href="">
-              <figure class="e-list__item__img">
-                <img src="./img/produtos/image 22.png" alt="">
-              </figure>
-              <p class="e-list__item__texto">Estampa em toda a parte ocasional Malha Masculina</p>
-              <span class="e-list__item__preco">R$125,95</span>
-            </a>
-          </li>
+          <?php endforeach ?>
         </ul>
+        <?php echo "<div class='e-lista_produtos__container__paginacao'     data-js='paginacao-container'> <div class='e-paginacao__list'>";
+          for ($i = 1; $i <= $total_paginas; $i++) {
+            if ($i === $pagina_atual) {
+                echo "<span class='e-paginacao__item'>$i</span>";
+            } else {
+                echo "<span class='e-paginacao__item' data-js='$i'><a href='produtos.php?pagina=$i' class='pagina'>$i</a></span>";
+            }
+        }
+        echo "</div> </div>";?>
       </div>
     </section>
   </main>
@@ -163,5 +111,6 @@
   </footer>
 
 </body>
-<script src="./js/index.js" type="module"></script>
+<!-- <script src="./js/index.js" type="module"></script> -->
+<script src="./js/produtos.js"></script>
 </html>

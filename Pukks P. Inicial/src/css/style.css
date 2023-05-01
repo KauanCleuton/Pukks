@@ -19,3 +19,7 @@
 @import url('./produtos/produtos.css');
 @import url('./produtos/produtos_marcas.css');
 @import url('./produtos/produtos_items.css');
+
+/* adm page */
+@import url('./adm/home.css');
+@import url('./adm/cadastrar_produtos.css');

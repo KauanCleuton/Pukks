@@ -1,0 +1,83 @@
+.e-principal_menu__container__form_box{
+  text-align: center;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+
+.e-principal_menu__container__form_box__tittle{
+  font-size: 4rem;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #030303;
+}
+
+.form_box__cadastro_produto{
+  padding: 10px 20px;
+}
+
+.form_box__cadastro_produto input,
+.form_box__cadastro_produto label,
+.form_box__cadastro_produto__campo select{
+  color: #030303;
+  font-size: 1.7rem;
+}
+
+.form_box__cadastro_produto__campo{
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 15px;
+}
+
+.form_box__cadastro_produto__campo label{
+  margin-left: 2px;
+}
+
+.form_box__cadastro_produto__campo input,
+.form_box__cadastro_produto__campo select{
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 3px solid #030303;
+}
+
+.form_box__cadastro_produto__campo.campo_file{
+  flex-direction: row;
+  gap: 25px;
+}
+
+.form_box__cadastro_produto__campo.campo_file input{
+  display: none;
+}
+
+.form_box__cadastro_produto__campo.campo_file label{
+  margin: 10px 0;
+  cursor: pointer;
+  background: rgb(56, 56, 161);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: max-content;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.form_box__cadastro_produto__campo.campo_file label:hover{
+  background: rgb(44, 44, 129);
+
+}
+
+.file_name{
+  cursor: pointer;
+  border: 3px solid #d2d2d2;
+  font-size: 1.7rem;
+  color: #d2d2d2;
+  display: block;
+  padding: 10px 15px;
+}
+
+.form_box__cadastro_produto__button{
+ align-self: center; 
+}

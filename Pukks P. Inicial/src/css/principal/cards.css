@@ -26,8 +26,12 @@
   align-items: center;
   justify-content: center;
 }
-.e-cards__conteudo__item > img:hover, 
-.e-cards__conteudo__item__title:hover + img{
+.e-cards__conteudo__item a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.e-cards__conteudo__item a:hover img{
   filter: brightness(70%);
 }
 .e-cards__conteudo__item:hover {

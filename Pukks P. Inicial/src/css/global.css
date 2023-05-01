@@ -81,6 +81,27 @@ img{
     color: #fff;
 }
 
+.u-completed_register,
+.u-error_register{
+    border-radius: 6px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    opacity: 0;
+    animation: fadeMsg 1s ease-in-out ;
+    transition: opacity 1s;
+}
+
+.u-error_register{
+    background: red;
+}
+
+.u-completed_register{
+    background: green;
+}
+
+
 .col-2{
     grid-column: 1/-1;
     place-self: center;

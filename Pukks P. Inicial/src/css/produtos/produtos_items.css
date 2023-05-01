@@ -19,12 +19,8 @@
   transition: 0.3s ease-in-out;
 }
 
-.e-list__item a:hover{
-  background: #f7f7f7;
-}
-
 .e-list__item a:hover > .e-list__item__img{
-  filter: brightness(80%);
+  filter: brightness(70%);
 }
 
 .e-list__item__texto{

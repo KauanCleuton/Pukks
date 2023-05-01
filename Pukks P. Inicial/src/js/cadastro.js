@@ -98,14 +98,15 @@ const submitForm = event => {
   const completedForm = isCompletedForm(inputsFormBox2) && confirmPassword() && validPassword()
   if(completedForm){
     formRegister.submit()
+    formRegister.reset()
   }
   removeMessageText(inputsFormBox2)
   
 }
 
 const formatedInputsForm = () => {
-  $('#cep').inputmask({mask: "99999-999", jitMasking: true});
-  $('#numero-residencia').inputmask({
+  $('#codigoPostal').inputmask({mask: "99999-999", jitMasking: true});
+  $('#numero').inputmask({
     mask: '9{1,5}a', 
     jitMasking: true,
     definitions: {"a":{casing: "upper"}}
@@ -125,17 +126,17 @@ const formatedInputsForm = () => {
     jitMasking: true,
     definitions: {'a':{ validator: '[A-Za-zà-úÀ-Ú ]'}}
   });
-  $('#first-name').inputmask({
+  $('#nome').inputmask({
     mask:"a{1,20}", 
     jitMasking:true,
     definitions: {'a':{ validator:'[A-Za-zà-úÀ-Ú ]'}}
   });
-  $('#second-name').inputmask({ 
+  $('#sobrenome').inputmask({ 
     mask:"a{1,20}", 
     jitMasking:true,
     definitions: {'a':{ validator:'[A-Za-zà-úÀ-Ú ]'}}
   });
-  $('#telefone').inputmask({mask: "(99) 99999-9999", jitMasking: true});
+  $('#telefone').inputmask({mask: "(99)99999-9999", jitMasking: true});
 }
 
 formRegister.addEventListener('click', passBoxForm)
