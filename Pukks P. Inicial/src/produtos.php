@@ -18,11 +18,11 @@
   <header class="c-header">
     <nav class="c-header__menu">
       <ul class="e-menu__list" data-js="menu-list">
-        <li class="menu__list__item"><a href="#">MASCULINO</a></li>
-        <li class="menu__list__item"><a href="#">FEMININO</a></li>
-        <li class="menu__list__item"><a href="#">ESPORTES</a></li>
+        <li class="menu__list__item"><a href="produtos.php?genero=masculino&pagina=1">MASCULINO</a></li>
+        <li class="menu__list__item"><a href="produtos.php?genero=feminino&pagina=1">FEMININO</a></li>
+        <li class="menu__list__item"><a href="produtos.php?genero=esporte&pagina=1">ESPORTES</a></li>
       </ul>
-      <h1 class="e-menu__title"><a href="">PUKKS</a></h1>
+      <h1 class="e-menu__title"><a href="../#">PUKKS</a></h1>
       <ul class="e-menu__imgs">
         <li>
           <a href="#"><img src="./img/icon/carrinho-carrinho 1.png" alt="carrinho de compras" width="30" height="30"></a>
@@ -30,7 +30,7 @@
         <li class="e-menu__imgs__item" data-js="dropdown-button" >
           <a href="#"><img src="./img/icon//conta 1.png" alt="fazer login na conta" width="30" height="30"></a>
           <ul class="e-menu__conta__dropdown" data-js="dropdown-menu">
-            <li class="e-menu__conta__dropdown__item"><a href="./login.html">login</a></li>
+            <li class="e-menu__conta__dropdown__item"><a href="./login.php">login</a></li>
             <li class="e-menu__conta__dropdown__item"><a href="./cadastro.html">registrar</a></li>
           </ul>
         </li>
@@ -68,7 +68,7 @@
           <li class="e-list__item">
             <a href="">
               <figure class="e-list__item__img">
-                <img src="<?php echo './' . $produtos['caminhoImg'] ?>" alt="">
+                <img src="<?php echo "../" . $produtos['url'] ?>" alt="">
               </figure>
               <p class="e-list__item__texto"><?php echo $produtos['nomeProduto'] ?></p>
               <span class="e-list__item__preco"> <?php echo 'R$', number_format($produtos['preco'], 2, ',', '.')  ?> </span>
@@ -81,13 +81,14 @@
             if ($i === $pagina_atual) {
                 echo "<span class='e-paginacao__item'>$i</span>";
             } else {
+              if ($genero_atual){
+                echo "<span class='e-paginacao__item' data-js='$i'><a href='produtos.php?genero=$genero_atual&pagina=$i' class='pagina'>$i</a></span>";
+              } else {
                 echo "<span class='e-paginacao__item' data-js='$i'><a href='produtos.php?pagina=$i' class='pagina'>$i</a></span>";
+              }
             }
         }
         echo "</div> </div>";?>
-      </div>
-    </section>
-  </main>
   
   <footer class="c-rodape">
       <h2 class="e-rodape__title">PUKKS</h2>

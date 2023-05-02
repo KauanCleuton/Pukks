@@ -20,36 +20,36 @@
     <div class="e-principal_menu__container u-container">
       <div class="e-principal_menu__container__form_box">
         <h2 class="e-principal_menu__container__form_box__tittle">Cadastrar produtos</h2>
-        <form class="form_box__cadastro_produto" action="">
+        <form class="form_box__cadastro_produto" action="../php/cadastroProdutos.php"  enctype="multipart/form-data" method="POST">
 
           <div class="form_box__cadastro_produto__campo">
             <label for="nome-produto">Nome do Produto:</label>
-            <input type="text" id="nome-produto" name="nome-produto">
+            <input type="text" id="nome-produto" name="nomeProduto">
           </div>
           
           <div class="form_box__cadastro_produto__campo">
             <label for="categoria-produto">Categoria:</label>
-            <input type="text" id="categoria-produto" name="categoria-produto">
+            <input type="text" id="categoria-produto" name="categoria">
           </div> 
 
           <div class="form_box__cadastro_produto__campo">
             <label for="marca-produto">Marca:</label>
-            <input type="text" id="marca-produto" name="marca-produto">
+            <input type="text" id="marca-produto" name="marca">
           </div> 
 
           <div class="form_box__cadastro_produto__campo">
             <label for="tipo-produto">Tipo:</label>
-            <input type="text" id="tipo-produto" name="tipo-produto">
+            <input type="text" id="tipo-produto" name="tipo">
           </div>
 
           <div class="form_box__cadastro_produto__campo">
             <label for="preco-produto">Preço:</label>
-            <input type="text" id="preco-produto" name="preco-produto">
+            <input type="text" id="preco-produto" name="preco">
           </div>
 
           <div class="form_box__cadastro_produto__campo">
             <label for="genero-produto">Genero:</label>
-            <select name="genero-produto" id="genero-produto">
+            <select name="genero" id="genero">
               <option value="masculino">Masculino</option>
               <option value="feminino">Feminino</option>
             </select>
@@ -58,7 +58,7 @@
           <div class="form_box__cadastro_produto__campo campo_file">
             <span class="file_name">Selecione a imagem</span>
             <label for="img-produto">UPLOAD</label>
-            <input type="file" name="img-produto" id="img-produto" accept="image/*">
+            <input type="file" name="url" id="img-produto">
           </div> 
 
           <button class="form_box__cadastro_produto__button u-button_type-1">Cadastrar</button>
