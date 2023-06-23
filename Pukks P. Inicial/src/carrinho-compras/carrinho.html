@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Carrinho de Compras</title>
+</head>
+
+<body>
+
+    <header class="c-header">
+        <nav class="c-header__menu">
+            <div class="e-header__logo">
+                <h1 class="e-header__h1">Pukks</h1>
+                <h2 class="e-header__h2">Carrinho de compras</h2>
+            </div>
+            <div class="e-header__botao-continuar">
+                <a class="e-header__link" href="#">Continue comprando ></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="c-principal u-margin">
+        <section class="c-principal__carrinho" data-js="e-checkbox">
+            <table class="e-cart__table__menu">
+                <thead class="e-table__thead">
+                    <tr class="e-table__tr">
+                        <th class="e-table-th__item u-item__th">
+                            Produtos
+                        </th>
+                        <th class="e-table-th__item">Preço</th>
+                        <th class="e-table-th__item">Quantidade</th>
+                        <th class="e-table-th__item">Total</th>
+                    </tr>
+                </thead>
+            </table>
+            <table class="e-cart__table ">
+                <tbody class="e-table__tbody">
+                    <tr class="e-table-tr__tbody" data-js="e-table-tr">
+                        <td class="e-table-td__item u-item">
+                            <div class="e-product u-item">
+                                <input type="checkbox" name="" class="check-item">
+                                <img src="https://static3.tcdn.com.br/img/img_prod/577735/roupa_da_galinha_pintadinha_18944548_1_e0dfaaf2e67e0a97a2a112af38c26492.jpg"
+                                    class="u-img" alt="">
+                                <div class="e-infor">
+                                    <span class="e-infor__name">Nome do Produto</span>
+                                    <span class="e-infor__categoria">Infantil</span>
+                                    <div class="e-tamanhos">
+                                        <button class="dropdown-button e-span__tamanhos">
+                                          <span data-js="button-span" class="e-span__tamanhos">Tamanho</span>
+                                        </button>
+                                        <div class="dropdown-content u-hide" data-js="e-tamanhos">
+                                          <a data-js="e-tamanho" href="#">P</a>
+                                          <a data-js="e-tamanho" href="#">M</a>
+                                          <a data-js="e-tamanho" href="#">G</a>
+                                          <a data-js="e-tamanho" href="#">GG</a>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="e-table-td__item" data-js="e-preco">R$ <span class="e-span__preco"
+                                data-js="e-span-preco">100.0</span> </td>
+                        <td class="e-table-td__item">
+                            <div class="e-qty" data-js="e-qty">
+                                <button class="e-button__qty " data-js="e-button-lesser">-</button>
+                                <span class="e-span__quantidade">1</span>
+                                <button class="e-button__qty " data-js="e-button-more">+</button>
+                            </div>
+                        </td>
+                        <td class="e-table-td__item u-gap"><span class="e-total-price"> R$<span class="e-span__total "
+                                    data-js="e-span-total">100.0 </span></span>
+                            <button class="e-btn__remove" data-js="btn-remove">X</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <div class="c-checkout">
+                <nav class="e-checkout__nav">
+                    <div class="e-checkout__final">
+                        <div class="e-checkout__infor">
+                            <span class="e-checkout-resume__span e-span-total__item">Resumo Do Pedido</span>
+                            <div class="e-selection__produtos">
+                                <input type="checkbox" name="" id="e-selection-todos">
+                                <span class="e-span-selection e-span-total__item">Selecionar Tudo (<span class="e-span-total__produtos"
+                                        data-js="e-span-total-produtos">0</span>)</span>
+                            </div>
+
+                        </div>
+                        <div class="e-checkout-infor__item">
+                            <span class="e-span-selection e-span-total__item">TOTAL: (<span class="e-span-total__produtos"
+                                    data-js="e-span-total-produtos-item">0</span> ITEM )
+                            </span>
+                            <span class="e-span-total__item"> R&#36; <span class="e-span-total__item"
+                                    data-js="e-span-total-item">00.00</span></span>
+                        </div>
+                    </div>
+                    <button class="e-btn-comprar u-button_type-1">Comprar</button>
+                </nav>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="c-rodape ">
+        <h2 class="e-rodape__title">PUKKS</h2>
+        <nav class="e-rodape__nav">
+
+            <h3 class="e-rodape__nav__social__title">siga-nos</h3>
+            <ul class="e-rodape__nav__social">
+                <li class="e-nav__social__item"><a href=""><img src="../img/redes_sociais/twitter.png"
+                            alt="twitter"></a></li>
+                <li class="e-nav__social__item"><a href=""><img src="../img/redes_sociais/instagram.png"
+                            alt="instagram"></a>
+                </li>
+                <li class="e-nav__social__item"><a href=""><img src="../img/redes_sociais/facebook.png"
+                            alt="facebook"></a>
+                </li>
+            </ul>
+
+            <h3 class="e-rodape__nav__about__title">sobre a pukks</h3>
+            <ul class="e-rodape__nav__about">
+                <li class="e-nav__about__item"><a href="">quem somos</a></li>
+                <li class="e-nav__about__item"><a href="">contato</a></li>
+                <li class="e-nav__about__item"><a href="">termos de uso</a></li>
+            </ul>
+        </nav>
+        <p class="e-rodape__terms">Todos os direitos reservados. PUKKS © 2023. Todos os preços incluem taxas sobre as
+            vendas. Nenhum direito pode derivar de uma informação contida neste site.</p>
+    </footer>
+    <script src="../js/carrinho.js" type="module">
+
+    </script>
+</body>
+
+</html>

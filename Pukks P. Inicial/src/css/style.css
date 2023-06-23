@@ -23,3 +23,9 @@
 /* adm page */
 @import url('./adm/home.css');
 @import url('./adm/cadastrar_produtos.css');
+
+/*pagina do produto*/
+@import url('./produto/pagina_produto.css');
+
+/*pagina do carrinho*/
+@import url('./carrinho/carrinho.css');
